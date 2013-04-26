@@ -38,7 +38,10 @@ Run an example:
 - rmask = twoSpeaker(sig,  [11,30],  'acoustDym_iter',  256,  16,  .5,  3,  '.');
 
 Run related model-based methods:
-sig = load('sample/t11_lwby6p_m30_lrwp2a.-9dB.val2');
+
+First load a signal by 
+- sig = load('sample/t11_lwby6p_m30_lrwp2a.-9dB.val2');
+Then choose one of the following:
 -	Reddy & Raj'07 (Training and test signal levels must match):  rmask = twoSpeaker(sig, [11,30], 'ReddyRaj07', 256, -1, -1, -1, '.');  
 (-1 means no parameter needed)
 -	MMSE: rmask = twoSpeaker(sig, [11,30], 'MMSE', 256, -1, -1, -1, '.');
