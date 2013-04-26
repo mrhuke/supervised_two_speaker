@@ -4,26 +4,29 @@ supervised_two_speaker
 Supervised Two Speaker Separation
 
 This program implements the cochannel speech separation algorithm described in "An iterative model-based approach to cochannel speech separation," by K. Hu and D. L. Wang, 2012 (submitted to IEEE Trans. Audio, Speech, and Lang. Process.)
+
 The MATLAB program run/twoSpeaker.m is a wrapper including several related model-based algorithms. The core separation algorithms are written in C++ under folder “c”.
 
 Usage: 
 rmask = twoSpeaker(sig, sid, type, nGau, bW, snr_criterion, nStep, workFolder)
 
 Inputs:
-sig:        Input time-domain cochannel speech signal
-sid:        Two speaker identities (sid(1) and sid(2))
-type:      'acoustDym_iter' – The iterative model-based algorithm
-	   'ReddyRaj' - Reddy & Raj'07 (training and test energy levels must match)
-	   'MMSE' - Minimum mean square estimation 
-	   'MAP' - Maximum a posteriori estimation
-	   'acoustDym' – With temporal dynamics
-	   'MMSE_iter' – MMSE + iterative estimation
-	   'MAP_iter' – MAP + iterative estimation           
+sig:	Input time-domain cochannel speech signal
+sid:	Two speaker identities (sid(1) and sid(2))
+type:   'acoustDym_iter' – The iterative model-based algorithm
+	'ReddyRaj' - Reddy & Raj'07 (training and test energy levels must match)
+	'MMSE' - Minimum mean square estimation 
+	'MAP' - Maximum a posteriori estimation
+	'acoustDym' – With temporal dynamics
+	'MMSE_iter' – MMSE + iterative estimation
+	'MAP_iter' – MAP + iterative estimation           
+
 nGau:   Number of Gaussians in GMM (use 256 in this code)  
 bW:      Beam width in a Viterbi search (use 16; only used in HMM-based algorithms)
 snr_criterion:  A threshold (in dB) on the absolute SNR difference to stop iterative estimation (use 0.5)
 nStep:   Maximum number of iterations (make sure iterative estimation will stop)
 workFolder:  Folder storing temporary files
+
 Outputs:
 rmask:   Estimated soft masks for two speaker (mask{1}  and mask{2})
 
