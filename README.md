@@ -30,12 +30,12 @@ nStep:   Maximum number of iterations (make sure iterative estimation will stop)
 workFolder:  Folder storing temporary files
 
 Outputs:
-rmask:   Estimated soft masks for two speaker (mask{1}  and mask{2})
-
+- rmask:   Estimated soft masks for two speaker (mask{1}  and mask{2})
+ 
 Run an example:
-In Linux, go to the “run” folder, start MATLAB, and input the following commands:
-sig = load('sample/t11_lwby6p_m30_lrwp2a.-9dB.val2');
-rmask = twoSpeaker(sig,  [11,30],  'acoustDym_iter',  256,  16,  .5,  3,  '.');
+- In Linux, go to the “run” folder, start MATLAB, and input the following commands:
+- sig = load('sample/t11_lwby6p_m30_lrwp2a.-9dB.val2');
+- rmask = twoSpeaker(sig,  [11,30],  'acoustDym_iter',  256,  16,  .5,  3,  '.');
 
 Run related model-based methods:
 sig = load('sample/t11_lwby6p_m30_lrwp2a.-9dB.val2');
@@ -46,7 +46,8 @@ sig = load('sample/t11_lwby6p_m30_lrwp2a.-9dB.val2');
 -	MAP + acoustic dynamics: rmask = twoSpeaker(sig, [11,30], ‘acoustDym’, 256, 16, -1, -1, '.');
 -	MMSE + iterative: rmask = twoSpeaker(sig, [11,30], 'MMSE_iter', 256, -1, .5, 3, '.');
 -	MAP + iterative: rmask = twoSpeaker(sig, [11,30], 'MAP_iter', 256, -1, .5, 3, '.');
- Notes: 
+ 
+Notes: 
 -	Speakers in this program come from the Speech Separation Challenge (SSC) corpus. Speaker identities are numbered from 1-34 following the definition in the SSC corpus. For example, sid=[1,2] means the target is speaker 1 and  interferer is speaker 2
 -	This implementation is in the log-cochleagram domain using 128-channel gammatone filterbank
 -	Sampling frequency is 16 kHz
