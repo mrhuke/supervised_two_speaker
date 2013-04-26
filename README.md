@@ -12,16 +12,16 @@ Usage:
 rmask = twoSpeaker(sig, sid, type, nGau, bW, snr_criterion, nStep, workFolder)
 
 Inputs:
-sig: Input time-domain cochannel speech signal
-sid: Two speaker identities (sid(1) and sid(2))
-type: 
-''acoustDym_iter'' – The iterative model-based algorithm
-''ReddyRaj'' - Reddy & Raj''07 (training and test energy levels must match)
-''MMSE'' - Minimum mean square estimation 
-''MAP'' - Maximum a posteriori estimation
-''acoustDym'' – With temporal dynamics
-''MMSE_iter'' – MMSE + iterative estimation
-''MAP_iter'' – MAP + iterative estimation           
+- sig: Input time-domain cochannel speech signal
+- sid: Two speaker identities (sid(1) and sid(2))
+- type: 
+-  ''acoustDym_iter'' – The iterative model-based algorithm
+-  ''ReddyRaj'' - Reddy & Raj''07 (training and test energy levels must match)
+-  ''MMSE'' - Minimum mean square estimation 
+-  ''MAP'' - Maximum a posteriori estimation
+-  ''acoustDym'' – With temporal dynamics
+-  ''MMSE_iter'' – MMSE + iterative estimation
+-  ''MAP_iter'' – MAP + iterative estimation           
 
 nGau:   Number of Gaussians in GMM (use 256 in this code)  
 bW:      Beam width in a Viterbi search (use 16; only used in HMM-based algorithms)
