@@ -6,7 +6,7 @@ This program implements the cochannel speech separation algorithm described in "
 The MATLAB program run/twoSpeaker.m is a wrapper including several related model-based algorithms. The core separation algorithms are written in C++ under folder “c”.
 
 
-## Usage ## 
+## Usage ##
 rmask = twoSpeaker(sig, sid, type, nGau, bW, snr_criterion, nStep, workFolder)
 
 
