@@ -31,6 +31,7 @@ workFolder:  Folder storing temporary files
 
 Outputs:
 - rmask:   Estimated soft masks for two speaker (mask{1}  and mask{2})
+The two ratio masks will also be output as ascii files: ratio_mask_1.ascii and ratio_mask_2.ascii
  
 Run an example:
 - In Linux, go to the “run” folder, start MATLAB, and input the following commands:

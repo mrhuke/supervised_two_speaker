@@ -119,5 +119,6 @@ switch type
         rmask{1} = tmasks{end};
         rmask{2} = 1-rmask{1};
 end
+dlmwrite('ratio_mask_1.ascii', rmask{1});
+dlmwrite('ratio_mask_2.ascii', rmask{2});
 delete([prefix,'.*']);
-        
