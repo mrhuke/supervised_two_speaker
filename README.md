@@ -1,7 +1,8 @@
 Supervised Two Speaker Separation
 ======================
 
-This program implements the cochannel speech separation algorithm described in "An iterative model-based approach to cochannel speech separation," by K. Hu and D. L. Wang, 2012 (submitted to IEEE Trans. Audio, Speech, and Lang. Process.)
+This program implements the cochannel speech separation algorithm described in K. Hu and D. L. Wang (2013), "An iterative model-based approach to cochannel speech separation,"
+EURASIP Journal on Audio, Speech, and Music Processing, vol. 2013, Article ID 2013-14.
 
 The MATLAB program run/twoSpeaker.m is a wrapper including several related model-based algorithms. The core separation algorithms are written in C++ under folder “c”.
 
